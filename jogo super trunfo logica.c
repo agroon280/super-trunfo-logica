@@ -1,8 +1,7 @@
 #include <stdio.h>
 
  int main() {
-int populacao1, populacao2, turismo1,turismo2;
-int maior1, maior2, maior3, maior4, maior5, maior6, menor;
+int populacao1, populacao2, turismo1,turismo2,comparação;
 float area1, area2, pib1, pib2;
 float superpoder1; 
 float superpoder2;  
@@ -12,14 +11,18 @@ float renda1, renda2;
 char codigo1[10] ,codigo2[10], cidade1[10],cidade2[10], estado1[10], estado2[10];
 //criadas as variaveis, prossiga para o proximo passo, para usar printf e scanf
 
-//escrever as variaveis separadamente
+//escrever as variaveis separadamente e adicionar valor
+printf("Menu principal");
+
+printf("Digite o numero para escolher o atributo a comparar");
+scanf("%d", &comparação);
 printf("digite o estado:\n");
 scanf("%s[^\n]", estado1);
 
 printf("digite o estado:\n");
 scanf("%s[\n]", estado2);
 
-printf("digite o codigo:\n");//A letra do estado seguida de um número
+printf("digite o codigo:\n");//letra do estado seguida de um número
 scanf("%s[\n]", codigo1);
 
 printf("digite o codigo:\n");
@@ -94,23 +97,9 @@ printf("densidade populacional: %.2f pessoa/km^2 \n", densidade2);
 printf("renda per capta: %.2f reais por pessoa \n", renda2);
 printf("superpoder: %.2f \n", superpoder2);
 printf(" ");
+
 //agora, comparar as cartas 
-maior1 = (populacao1>populacao2) ? 1 : 0;
-maior2 = (area1>area2) ? 1 : 0;
-maior3 = (pib1>pib2) ? 1 :0;
-maior4 = (turismo1>turismo2) ? 1 : 0;
-menor = (densidade1<densidade2) ? 1: 0;
-maior5 = (renda1 > renda2) ? 0: 1;
-maior6 = (superpoder1> superpoder2) ? 1 : 0;
-printf(" ");
-printf("1 = carta 1 \t 0 = carta 2");
-printf("populaçao:carta %d venceu \n", maior1);
-printf("area:carta %d venceu \n",maior2);
-printf("PIB:carta %d venceu \n",maior3);
-printf("ponto turisicos:carta %d venceu \n",maior4);
-printf("densidade populacional:carta %d venceu \n",menor);
-printf("renda per capta: %d venceu \n",maior5);
-printf("superpoder:carta %d venceu \n",maior6);
+
 
 return 0;
 
