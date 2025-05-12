@@ -1,3 +1,3 @@
-# super-trunfo-mestre
+# super-trunfo-logica-aventureiro
  
  
